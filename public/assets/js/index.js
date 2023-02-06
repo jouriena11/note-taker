@@ -51,7 +51,7 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
-  hide(saveNoteBtn);
+  hide(saveNoteBtn); 
 
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
@@ -163,7 +163,11 @@ const renderNoteList = async (notes) => {
     li.dataset.note = JSON.stringify(note);
 
     noteListItems.push(li);
+    console.log('note =>',note);
   });
+
+  console.log('noteListItems =>',noteListItems)
+
 
   if (window.location.pathname === '/notes') {
     noteListItems.forEach((note) => noteList[0].append(note));
