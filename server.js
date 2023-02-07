@@ -19,7 +19,7 @@ app.get('/notes', (req, res) => {
 });
 
 // Wildcard route to direct users to an index.html page
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     console.info('index.html is sent.')
     res.sendFile(path.join(__dirname, 'public/index.html'))
   });
