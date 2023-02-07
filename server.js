@@ -15,13 +15,13 @@ app.use(express.static('public'));
 // Wildcard route to direct users to an index.html page
 app.get('/', (req, res) => {
   console.info('index.html is sent.')
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 // GET/notes to return notes.html
 app.get('/notes', (req, res) => {
     console.info('notes.html is sent.')
-    res.sendFile(path.join(__dirname, 'public/notes.html'));
+    res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 app.listen(PORT, () =>
