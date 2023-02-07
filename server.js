@@ -12,17 +12,17 @@ app.use('/api', api);
 
 app.use(express.static('public'));
 
+// Wildcard route to direct users to an index.html page
+app.get('/', (req, res) => {
+  console.info('index.html is sent.')
+  res.sendFile(path.join(__dirname, 'public/index.html'))
+});
+
 // GET/notes to return notes.html
 app.get('/notes', (req, res) => {
     console.info('notes.html is sent.')
     res.sendFile(path.join(__dirname, 'public/notes.html'));
 });
-
-// Wildcard route to direct users to an index.html page
-app.get('/', (req, res) => {
-    console.info('index.html is sent.')
-    res.sendFile(path.join(__dirname, 'public/index.html'))
-  });
 
 app.listen(PORT, () =>
   console.log(`This application is listening at http://localhost:${PORT}`)
