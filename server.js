@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const api = require('./routes/index');
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Middleware for parsing JSON and urlencoded form data
@@ -12,16 +12,16 @@ app.use('/api', api);
 
 app.use(express.static('public'));
 
-// Wildcard route to direct users to an index.html page
-app.get('/', (req, res) => {
-  console.info('index.html is sent.')
-  return res.sendFile(path.join(__dirname, '/public/index.html'))
-});
-
 // GET/notes to return notes.html
 app.get('/notes', (req, res) => {
-    console.info('notes.html is sent.')
-    return res.sendFile(path.join(__dirname, '/public/notes.html'));
+  console.info('notes.html is sent.')
+  return res.sendFile(path.join(__dirname, '/public/notes.html'));
+});
+
+// Wildcard route to direct users to an index.html page
+app.get('*', (req, res) => {
+  console.info('index.html is sent.')
+  return res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 app.listen(PORT, () =>
