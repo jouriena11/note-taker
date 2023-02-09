@@ -2,7 +2,7 @@
 
 ## **Project Description**
 
-This application allows users to take, save, modify, and delete notes. Any changes in the notes data are stored into a JSON file. Existing notes will be automatically retrived from this file on page refresh. Express.js is implemented for efficient routing.
+This application allows users to take, save, and delete notes. Any changes in the notes data are stored into a JSON file. Existing notes will be automatically retrived from this file on page refresh. Express.js is implemented for efficient routing.
 
 ## **URLs**
 - [Deployed Application URL](https://note-taker-jouriena11.herokuapp.com/)
@@ -12,6 +12,7 @@ This application allows users to take, save, modify, and delete notes. Any chang
 - <a href="#installation">Installation</a>
 - <a href="#technologies-used">Technologies Used</a>
 - <a href="#usage">Usage</a>
+- <a href="#future-development">Future Development</a>
 
 
 ## **Installation**
@@ -36,16 +37,27 @@ npm i
 ## **Usage**
 Click 'Get Started' button to start the application.
 
-TODO: add screenshot
+<p align="left">
+    <img width="700px" src="./public/assets/img/screenshot-get-started.jpg">
+</p>
 
 To Save a note -- Enter BOTH the note title and text, and a save button will appear on the top right corner of the page. Click the button to save the note.
 
-TODO: add screenshot
+<p align="left">
+    <img width="700px" src="./public/assets/img/screenshot-save-note.jpg">
+</p>
 
 To Read an existing note -- Select a note you want to read from the notes list on the left side of the page. The note content will appear on the right side of the page.
 
-TODO: add screenshot
+<p align="left">
+    <img width="700px" src="./public/assets/img/screenshot-read-note.jpg">
+</p>
 
 To Delete an existing note -- Select a bin button on the note you wish to delete.
 
-TODO: add screenshot
+<p align="left">
+    <img width="700px" src="./public/assets/img/screenshot-delete-note.jpg">
+</p>
+
+## **Future Development**
+- to allow editing existing notes
