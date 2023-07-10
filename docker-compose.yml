@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  node-server:
+    container_name: node-server
+    image: node:18.16.1-alpine
+    restart: always
+    volumes: 
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    ports: 
+      - 4001:3000
+    command: >
+      /bin/sh -c "npm install
+      && npm start"
+
